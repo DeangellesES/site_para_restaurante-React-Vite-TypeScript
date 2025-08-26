@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* LINKS DO CABECALHO */
+.links {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+/* SEÇÃO SERVICOS */
+.servicos-icones {
+  /* font-size: .1rem; */
+  border: 1px solid #fff;
+  border-radius: 50%;
+  width: 30%;
+  height: 40%;
+  padding: 1.3rem;
+}
