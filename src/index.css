@@ -1,14 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Story+Script&display=swap');
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+:root {
+  --font-um: font-family: 'Pacifico', sans-serif;
+}
+
 /* LINKS DO CABECALHO */
+.titulo {
+  text-decoration: none;
+}
+
 .links {
   text-decoration: none;
   font-size: 1.2rem;
+  color: #d3d1d1;
+}
+
+.link-servico {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #d3d1d1;
+}
+
+.link-servico:hover {
   color: #fff;
+}
+
+.links:hover {
+  color: #fff;
+}
+
+/* PRATOS POPULARES */
+.pratos:hover .icone-pratos {
+  font-size: 2.5rem;
+  font-weight: 100;
+  display: block;
+  position: absolute;
+  top: 100px;
+  left: 150px;
+  color: #4d4b4b;
+}
+
+.icone-pratos {
+  display: none;
 }
 
 /* SEÇÃO SERVICOS */
@@ -19,4 +59,139 @@
   width: 30%;
   height: 40%;
   padding: 1.3rem;
+}
+
+/* SEÇÃO CONTATO */
+.contato-icone {
+  color: #a5a0a0ff;
+  font-size: 1.5rem;
+}
+
+/* SURGIR */
+/* DE BAIXO PRA CIMA TITULO PÁGINA INICIAL TOPO*/
+.js-scroll.ativo {
+  animation: scrollSlide 1s forwards;
+  /*chmando a animação keyframes e colocando um tempo nela e fazendo ela vir de lado*/
+}
+
+@keyframes scrollSlide {
+  from {
+    transform: translate3d(0, 100px, 0)
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* DA DIREITA PRA ESQUERDA FURMULÁRIO DE RESERVA*/
+.js-scroll-direita.ativo {
+  animation: scrollSlideLado 2s forwards;
+  /*chmando a animação keyframes e colocando um tempo nela e fazendo ela vir de lado*/
+}
+
+@keyframes scrollSlideLado {
+  from {
+    transform: translate3d(200px, 0, 0)
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* DE BAIXO PRA CIMA SEÇÃO NOSSOS SERVIÇOS */
+.js-scrollBaixo.ativo {
+  animation: scrollSlideBaixo 2s forwards;
+  /*chmando a animação keyframes e colocando um tempo nela e fazendo ela vir de lado*/
+}
+
+@keyframes scrollSlideBaixo {
+  from {
+    transform: translate3d(0, 70px, 0)
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* DE BAIXO PRA CIMA SEÇÃO CURIOSIDADES NUMEROS CAIXA 1*/
+.js-scroll-pracima.ativo {
+  animation: scrollSlideBaixoPraCima 1s forwards;
+  /*chmando a animação keyframes e colocando um tempo nela e fazendo ela vir de lado*/
+}
+
+@keyframes scrollSlideBaixoPraCima {
+  from {
+    transform: translate3d(0, 10px, 0)
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* DE BAIXO PRA CIMA SEÇÃO CURIOSIDADES NUMEROS CAIXA 2*/
+.js-scroll-pracimaUm.ativo {
+  animation: scrollSlideBaixoPraCimaUm 3s forwards;
+  /*chmando a animação keyframes e colocando um tempo nela e fazendo ela vir de lado*/
+}
+
+@keyframes scrollSlideBaixoPraCimaUm {
+  from {
+    transform: translate3d(0, 50px, 0)
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* DE BAIXO PRA CIMA SEÇÃO CURIOSIDADES NUMEROS CAIXA 3*/
+.js-scroll-pracimaDois.ativo {
+  animation: scrollSlideBaixoPraCimaDois 4s forwards;
+  /*chmando a animação keyframes e colocando um tempo nela e fazendo ela vir de lado*/
+}
+
+@keyframes scrollSlideBaixoPraCimaDois {
+  from {
+    transform: translate3d(0, 70px, 0)
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* DE BAIXO PRA CIMA SEÇÃO CURIOSIDADES NUMEROS CAIXA 4*/
+.js-scroll-pracimaTres.ativo {
+  animation: scrollSlideBaixoPraCimaTres 5s forwards;
+  /*chmando a animação keyframes e colocando um tempo nela e fazendo ela vir de lado*/
+}
+
+@keyframes scrollSlideBaixoPraCimaTres {
+  from {
+    transform: translate3d(0, 90px, 0)
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* DE BAIXO PRA CIMA TITULO NA SEÇÃO INSCREVA-SE*/
+.js-scroll-titulo-dois.ativo {
+  animation: scrollSlideBaixoPraCimaTituloDois 1s forwards;
+  /*chmando a animação keyframes e colocando um tempo nela e fazendo ela vir de lado*/
+}
+
+@keyframes scrollSlideBaixoPraCimaTituloDois {
+  from {
+    transform: translate3d(0, 20px, 0)
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
 }

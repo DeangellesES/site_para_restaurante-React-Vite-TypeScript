@@ -1,15 +1,15 @@
 import Cabecalho from "../../Components/Cabecalho"
 import Rodape from "../../Components/Rodape"
 import Populares from "../../Components/Populares/Populares"
+import Qualidade from "../../Components/Qualidade/Qualidade"
+import Inscricao from "../../Components/Inscricao/Inscricao"
+import NossosServicos from "../../Components/NossosServicos/NossosServicos"
 
 import styled from "styled-components"
 
 import imgTopo from "./assets/restaurante-mesa.jpg"
 
-import { RiEmotionHappyLine } from "react-icons/ri";
-import { TfiThought } from "react-icons/tfi";
-import { FaTruck } from "react-icons/fa";
-
+import React, { useState, useEffect } from 'react';
 
 const SecaoTopo = styled.section`
     background-image: url(${imgTopo});
@@ -32,7 +32,7 @@ const SecaoTopoFundo = styled.div`
     align-items: center;
     justify-content: center;
     background-color: #0e0b188f;
-    width: 100vw;
+    width: 100%;
     gap: 5rem;
     position: absolute;
     bottom: 0;
@@ -43,6 +43,8 @@ const SecaoTopoTituloPrincipal = styled.div`
 const SecaoTopoTituloPrincipalDentro = styled.h1`
     font-size: 5rem;
     color: #fff;
+    font-family: "Pacifico", sans-serif;
+    font-weight: 100;
 `
 
 const SecaoTopoFormulario = styled.form`
@@ -58,12 +60,16 @@ const SecaoTopoFormulario = styled.form`
 const SecaoTopoFormularioTitulo = styled.h2`
     font-size: 1.6rem;
     margin-bottom: 1.2rem;
+    font-family: "Pacifico", sans-serif;
+    font-weight: 100;
 `
 const SecaoTopoFormularioLabel = styled.label`
-    font-size: 1.2rem;
+    font-size: 1.2rem;  
 `
 const SecaoTopoFormularioInput = styled.input`
     padding: .7rem 2rem;
+    background-color: transparent;
+    border: 1px solid #d3d1d1;
 `
 const SecaoTopoFormularioLink = styled.a`
     padding: .7rem 2rem;
@@ -73,76 +79,17 @@ const SecaoTopoFormularioLink = styled.a`
     text-decoration: none;
     font-weight: 600;
     font-size: 1.2rem;
-    border-radius: 5px;
+    border-radius: 5px; 
 `
 const SecaoTopoFormularioSelect = styled.select`
     padding: .7rem 2rem .7rem .5rem;
-`
-
-// INICIO SEÇÃO NOSSOS SERVIÇOS
-const SecaoServicos = styled.section`
-    background-color: #ec920bff;
-    color: #fff;
-    padding: 9% 0;
-`
-const SecaoServicosTitulos = styled.div`
-    display: grid;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 5rem; 
-`
-const SecaoServicosTitulosTitulo = styled.h1`
-    font-weight: 100;
-    font-size: 3rem;
-    margin-bottom: 1rem;
-`
-const SecaoServicosTitulosParagrafo = styled.p`
-    font-size: 1.3rem;
-`
-const SecaoServicosCaixas = styled.div`
-    display: flex;
-    justify-content: center;
-    gap: 4rem;
-`
-
-const SecaoServicosCaixasCaixa = styled.div`
-    width: 20%;
-    text-align: center;
-    
-`
-const SecaoServicosCaixasCaixaTitulo = styled.h1`
-    margin: 1.3rem 0;
-`
-
-// INICIO SEÇÃO QUALIDADE
-const SecaoQualidade = styled.section`
-    background-image: url(${imgTopo});
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    height: 110vh;
-`
-const SecaoQualidadeFundo = styled.div`
-    background-color: #0e0b188f;
-    height: 110vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
+    background-color: trasnparent !important;
+    border: 1px solid #d3d1d1;
+    background-color: transparent;
+    border: 1px solid #d3d1d1;
     color: #fff;
 `
-const SecaoQualidadeTitulo = styled.h1`
-    font-size: 4.5rem;
-    width: 70%;
-    font-weight: 300;
-`
-const SecaoQualidadeParagrafo = styled.p`
-    font-size: 1.5rem; 
-    margin-top: 4rem;
-`
+
 // INICIO SEÇÃO CURIOSISDADES
 const SecaoCuriosidades = styled.section`
     text-align: center;
@@ -157,6 +104,8 @@ const SecaoCuriosidadesTitulos = styled.div`
 const SecaoCuriosidadesTitulosTitulo = styled.h1`
     font-size: 3rem;
     color: #ec920bff; 
+    font-family: 'Pacifico', sans-serif;
+    font-weight: 100;
 `
 const SecaoCuriosidadesTitulosParagrafo = styled.p`
     font-size: 1.2rem;
@@ -182,53 +131,175 @@ const SecaoCuriosidadesCaixaParagrafoDois = styled.p`
     color: #595959;
     margin-top: 1.2rem;
 `
-// INICIO SEÇÃO INSCREVER-SE
-const SecaoInscricao = styled.section`
-    text-align: center;
-    background-color: #0099ff;
-    height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 2rem;
-`
-const SecaoInscricaoTitulo = styled.h1`
-    font-size: 3rem;
-    color: #fff;
-`
-const SecaoInscricaoParagrafo = styled.p`
-    font-size: 1.3rem;
-    color: #d9d9d9;
-`
-const SecaoInscricaoAncora = styled.a`
-    color: #fff;
-    background-color: #ec920bff;
-    text-decoration: none;
-    padding: 0.7rem 5.5rem;
-    border: none;
-    text-transform: uppercase;
-`
-const SecaoInscricaoInput = styled.input`
-    padding: 0.7rem 1rem;
-    border: #fff;
-    margin-right: 1.5rem;
-    width: 25%;
-`
+
+// FUNCAO TRAZER DE BAIXO TITULO 
+function mouseScroll() {
+    const scroll = document.querySelectorAll('.js-scroll')
+    const height = window.innerHeight * 0.6
+    scroll[0].classList.add('ativo')
+    scroll.forEach((section) => {
+        const sectionTop = (section.getBoundingClientRect().top - height) < 0
+        if (sectionTop) {
+            section.classList.add('ativo')
+        }
+    })
+}
+
+window.addEventListener('scroll', mouseScroll)
+
+// FUNCAO TRAZER DA DIREITA PRA ESQUERDA FORMULÁRIO 
+function mouseScrollLado() {
+    const scroll = document.querySelectorAll('.js-scroll-direita')
+    const height = window.innerHeight * 0.6
+    scroll[0].classList.add('ativo')
+    scroll.forEach((section) => {
+        const sectionTop = (section.getBoundingClientRect().top - height) < 0
+        if (sectionTop) {
+            section.classList.add('ativo')
+        }
+    })
+}
+
+window.addEventListener('scroll', mouseScrollLado)
+
+// FUNCAO TRAZER DE BAIXO PRA CIMA CAIXAS EM CURIOSIDADE CAIXA 1 
+function mouseScrollPraCima() {
+    const scroll = document.querySelectorAll('.js-scroll-pracima')
+    const height = window.innerHeight * 0.6
+    scroll[0].classList.add('ativo')
+    scroll.forEach((section) => {
+        const sectionTop = (section.getBoundingClientRect().top - height) < 0
+        if (sectionTop) {
+            section.classList.add('ativo')
+        }
+    })
+}
+
+window.addEventListener('scroll', mouseScrollPraCima)
+
+// FUNCAO TRAZER DE BAIXO PRA CIMA CAIXAS EM CURIOSIDADE CAIXA 2
+function mouseScrollPraCimaUm() {
+    const scroll = document.querySelectorAll('.js-scroll-pracimaUm')
+    const height = window.innerHeight * 0.6
+    scroll[0].classList.add('ativo')
+    scroll.forEach((section) => {
+        const sectionTop = (section.getBoundingClientRect().top - height) < 0
+        if (sectionTop) {
+            section.classList.add('ativo')
+        }
+    })
+}
+
+window.addEventListener('scroll', mouseScrollPraCimaUm)
+
+// FUNCAO TRAZER DE BAIXO PRA CIMA CAIXAS EM CURIOSIDADE CAIXA 3
+function mouseScrollPraCimaDois() {
+    const scroll = document.querySelectorAll('.js-scroll-pracimaDois')
+    const height = window.innerHeight * 0.6
+    scroll[0].classList.add('ativo')
+    scroll.forEach((section) => {
+        const sectionTop = (section.getBoundingClientRect().top - height) < 0
+        if (sectionTop) {
+            section.classList.add('ativo')
+        }
+    })
+}
+
+window.addEventListener('scroll', mouseScrollPraCimaDois)
+
+// FUNCAO TRAZER DE BAIXO PRA CIMA CAIXAS EM CURIOSIDADE CAIXA 4
+function mouseScrollPraCimaTres() {
+    const scroll = document.querySelectorAll('.js-scroll-pracimaTres')
+    const height = window.innerHeight * 0.6
+    scroll[0].classList.add('ativo')
+    scroll.forEach((section) => {
+        const sectionTop = (section.getBoundingClientRect().top - height) < 0
+        if (sectionTop) {
+            section.classList.add('ativo')
+        }
+    })
+}
+
+window.addEventListener('scroll', mouseScrollPraCimaTres)
+
 
 function Inicio() {
+    // CONTADOR UM
+    const [contador, setContador] = useState(1);
+    const limite = 5;
+
+    useEffect(() => {
+        // Só cria o intervalo se contador for menor ou igual ao limite
+        if (contador <= limite) {
+            const intervalo = setInterval(() => {
+                setContador((prev) => prev + 1);
+            }, 100);
+
+            // Limpa o intervalo quando o componente for desmontado ou contador mudar
+            return () => clearInterval(intervalo);
+        }
+    }, [contador]);
+
+    // CONTADOR DOIS
+    const [contadorUm, setContadorUm] = useState(1);
+    const limiteUm = 43;
+
+    useEffect(() => {
+        // Só cria o intervalo se contador for menor ou igual ao limite
+        if (contadorUm <= limiteUm) {
+            const intervalo = setInterval(() => {
+                setContadorUm((prev) => prev + 1);
+            }, 50);
+
+            // Limpa o intervalo quando o componente for desmontado ou contador mudar
+            return () => clearInterval(intervalo);
+        }
+    }, [contadorUm]);
+
+    // CONTADOR TRES
+    const [contadorDois, setContadorDois] = useState(1);
+    const limiteDois = 32;
+
+    useEffect(() => {
+        // Só cria o intervalo se contador for menor ou igual ao limite
+        if (contadorDois <= limiteDois) {
+            const intervalo = setInterval(() => {
+                setContadorDois((prev) => prev + 1);
+            }, 50);
+
+            // Limpa o intervalo quando o componente for desmontado ou contador mudar
+            return () => clearInterval(intervalo);
+        }
+    }, [contadorDois]);
+
+    // CONTADOR QUATRO
+    const [contadorTres, setContadorTres] = useState(1);
+    const limiteTres = 1985;
+
+    useEffect(() => {
+        // Só cria o intervalo se contador for menor ou igual ao limite
+        if (contadorTres <= limiteTres) {
+            const intervalo = setInterval(() => {
+                setContadorTres((prev) => prev + 1);
+            }, .3);
+
+            // Limpa o intervalo quando o componente for desmontado ou contador mudar
+            return () => clearInterval(intervalo);
+        }
+    }, [contadorTres]);
 
     return (
         <>
             <Cabecalho></Cabecalho>
 
             {/* INICIO SECAO PARTE DE CIMA */}
-            <SecaoTopo>
+            <SecaoTopo >
                 <SecaoTopoFundo>
-                    <SecaoTopoTituloPrincipal>
+                    <SecaoTopoTituloPrincipal className="js-scroll">
                         <SecaoTopoTituloPrincipalDentro>Tudo de bom gosto!</SecaoTopoTituloPrincipalDentro>
                     </SecaoTopoTituloPrincipal>
 
-                    <div>
+                    <div className="js-scroll-direita">
                         <SecaoTopoFormulario action="">
                             <SecaoTopoFormularioTitulo>Reserva de mesa</SecaoTopoFormularioTitulo>
 
@@ -256,66 +327,35 @@ function Inicio() {
             {/* FIM SECAO PRATOS POPULARES */}
 
             {/* INICIO SECAO NOSSOS SERVICOS */}
-            <SecaoServicos>
-                <SecaoServicosTitulos>
-                    <SecaoServicosTitulosTitulo>Nossos Serviços</SecaoServicosTitulosTitulo>
-                    <SecaoServicosTitulosParagrafo>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque neque voluptate liber.</SecaoServicosTitulosParagrafo>
-                </SecaoServicosTitulos>
-                <SecaoServicosCaixas>
-                    <SecaoServicosCaixasCaixa>
-                        <RiEmotionHappyLine className="servicos-icones" />
-                        <SecaoServicosCaixasCaixaTitulo>Pessoas Felizes</SecaoServicosCaixasCaixaTitulo>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque neque voluptate liber.</p>
-                    </SecaoServicosCaixasCaixa>
-
-                    <SecaoServicosCaixasCaixa>
-                        <TfiThought className="servicos-icones" />
-                        <SecaoServicosCaixasCaixaTitulo>Pessoas Felizes</SecaoServicosCaixasCaixaTitulo>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque neque voluptate liber.</p>
-                    </SecaoServicosCaixasCaixa>
-
-                    <SecaoServicosCaixasCaixa>
-                        <FaTruck className="servicos-icones" />
-                        <SecaoServicosCaixasCaixaTitulo>Pessoas Felizes</SecaoServicosCaixasCaixaTitulo>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque neque voluptate liber.</p>
-                    </SecaoServicosCaixasCaixa>
-
-                </SecaoServicosCaixas>
-
-            </SecaoServicos>
+            <NossosServicos></NossosServicos>
             {/* FIM SECAO NOSSOS SERVICOS */}
 
             {/* INICIO QUALIDADE */}
-            <SecaoQualidade>
-                <SecaoQualidadeFundo>
-                    <SecaoQualidadeTitulo>"A alta qualidade do serviço me faz voltar sempre!"</SecaoQualidadeTitulo>
-                    <SecaoQualidadeParagrafo>— John Doe, CEO of Novo Sabor.</SecaoQualidadeParagrafo>
-                </SecaoQualidadeFundo>
-            </SecaoQualidade>
+            <Qualidade></Qualidade>
             {/* FIM QUALIDADE */}
 
             {/* INICIO SEÇÃO CURIOSIDADES */}
             <SecaoCuriosidades>
-                <SecaoCuriosidadesTitulos>
+                <SecaoCuriosidadesTitulos className="js-scrollBaixo">
                     <SecaoCuriosidadesTitulosTitulo>Curiosidades</SecaoCuriosidadesTitulosTitulo>
                     <SecaoCuriosidadesTitulosParagrafo>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum totam cum maxime illum ex sit soluta doloribus, temporibus perspiciatis!</SecaoCuriosidadesTitulosParagrafo>
                 </SecaoCuriosidadesTitulos>
 
                 <SecaoCuriosidadesCaixas>
-                    <SecaoCuriosidadesCaixa>
-                        <SecaoCuriosidadesCaixaParagrafoUm>5</SecaoCuriosidadesCaixaParagrafoUm>
+                    <SecaoCuriosidadesCaixa className="js-scroll-pracima">
+                        <SecaoCuriosidadesCaixaParagrafoUm>{contador <= limite ? contador : limite}</SecaoCuriosidadesCaixaParagrafoUm>
                         <SecaoCuriosidadesCaixaParagrafoDois>Classificação média</SecaoCuriosidadesCaixaParagrafoDois>
                     </SecaoCuriosidadesCaixa>
-                    <SecaoCuriosidadesCaixa>
-                        <SecaoCuriosidadesCaixaParagrafoUm>43</SecaoCuriosidadesCaixaParagrafoUm>
+                    <SecaoCuriosidadesCaixa className="js-scroll-pracimaUm">
+                        <SecaoCuriosidadesCaixaParagrafoUm>{contadorUm <= limiteUm ? contadorUm : limiteUm}</SecaoCuriosidadesCaixaParagrafoUm>
                         <SecaoCuriosidadesCaixaParagrafoDois>Tipos de alimentos</SecaoCuriosidadesCaixaParagrafoDois>
                     </SecaoCuriosidadesCaixa>
-                    <SecaoCuriosidadesCaixa>
-                        <SecaoCuriosidadesCaixaParagrafoUm>32</SecaoCuriosidadesCaixaParagrafoUm>
+                    <SecaoCuriosidadesCaixa className="js-scroll-pracimaDois">
+                        <SecaoCuriosidadesCaixaParagrafoUm>{contadorDois <= limiteDois ? contadorDois : limiteDois}</SecaoCuriosidadesCaixaParagrafoUm>
                         <SecaoCuriosidadesCaixaParagrafoDois>Chef de cozinha</SecaoCuriosidadesCaixaParagrafoDois>
                     </SecaoCuriosidadesCaixa>
-                    <SecaoCuriosidadesCaixa>
-                        <SecaoCuriosidadesCaixaParagrafoUm>1985</SecaoCuriosidadesCaixaParagrafoUm>
+                    <SecaoCuriosidadesCaixa className="js-scroll-pracimaTres">
+                        <SecaoCuriosidadesCaixaParagrafoUm>{contadorTres <= limiteTres ? contadorTres : limiteTres}</SecaoCuriosidadesCaixaParagrafoUm>
                         <SecaoCuriosidadesCaixaParagrafoDois>Ano de início</SecaoCuriosidadesCaixaParagrafoDois>
                     </SecaoCuriosidadesCaixa>
                 </SecaoCuriosidadesCaixas>
@@ -324,14 +364,7 @@ function Inicio() {
             {/* FIM SEÇÃO CURIOSIDADES */}
 
             {/* INCIO SEÇÃO INSCRVER-SE */}
-            <SecaoInscricao>
-                <SecaoInscricaoTitulo>Inscreva-se</SecaoInscricaoTitulo>
-                <SecaoInscricaoParagrafo>Seja o primeiro a saber sobre os novos modelos.</SecaoInscricaoParagrafo>
-                <form action="">
-                    <SecaoInscricaoInput type="email" placeholder="Your Email"/>
-                    <SecaoInscricaoAncora href="">Inscreva-se</SecaoInscricaoAncora>
-                </form>
-            </SecaoInscricao>
+            <Inscricao></Inscricao>
             {/* FIM SEÇÃO INSCRVER-SE */}
 
             <Rodape></Rodape >

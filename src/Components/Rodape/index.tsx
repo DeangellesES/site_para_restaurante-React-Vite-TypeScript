@@ -15,7 +15,6 @@ const EmBaixo = styled.footer`
     height: 100vh;
 `
 
-
 const EmBaixoFundo = styled.div`
     height: 100vh;
     background-color: #0e0b188f;
@@ -24,7 +23,6 @@ const EmBaixoFundo = styled.div`
     justify-content: center;
     align-items: center;
 `
-
 const EmBaixoCaixaCima = styled.div`
     display: flex;
     color: #fff;
@@ -32,7 +30,6 @@ const EmBaixoCaixaCima = styled.div`
     border-bottom: 2px solid #6e6c6cff;
     width: 80%;
 `
-
 const EmBaixoCaixaCimaDentro = styled.div`
     display: flex;
     flex-direction: column;
@@ -45,13 +42,12 @@ const EmBaixoCaixaCimaDentroContato = styled.div`
     color: #ec920bff;
     gap: 1.5rem;
 `
-
 const EmBaixoCaixaCimaDentroContatoIcone = styled.div`
     display: flex;
     gap: .7rem;
+    cursor: pointer;
     font-size: 1.1rem;
 `
-
 const EmBaixoCaixaBaixo = styled.div`
     text-align: center;
     margin-top: 3rem;
@@ -63,6 +59,7 @@ const EmBaixoCaixaBaixoDentro = styled.div`
     gap: 1rem;
     justify-content: center;
     font-size: 1.4rem;
+    cursor: pointer;
 `
 const EmBaixoCaixaBaixoDireitos = styled.div`
     color: #a5a0a0ff;

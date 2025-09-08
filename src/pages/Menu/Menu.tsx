@@ -1,9 +1,13 @@
 import Cabecalho from "../../Components/Cabecalho"
 import Rodape from "../../Components/Rodape"
+import Populares from "../../Components/Populares/Populares"
 
 import styled from "styled-components"
 
 import imgTopo from "./assets/restaurante-mesa.jpg"
+import Qualidade from "../../Components/Qualidade/Qualidade"
+import Inscricao from "../../Components/Inscricao/Inscricao"
+
 
 const SecaoTopo = styled.section`
     background-image: url(${imgTopo});
@@ -26,30 +30,39 @@ const SecaoTopoFundo = styled.div`
     align-items: center;
     justify-content: center;
     background-color: #0e0b188f;
-    width: 100vw;
+    width: 100%;
     position: absolute;
     bottom: 0;
 `
 const SecaoTopotitulo = styled.h1`
     color: #fff;
     font-size: 4rem;
+    font-family: 'Pacifico', sans-serif;
+    font-weight: 100;
 `
 
 function Menu () {
     return(
         <>
             <Cabecalho></Cabecalho>
-
             {/* INICIO SECAO TOPO */}
             <SecaoTopo>
                 <SecaoTopoFundo>
-                    <SecaoTopotitulo>Experimente todo o nosso menu!</SecaoTopotitulo>
+                    <SecaoTopotitulo className="js-scroll">Experimente todo o nosso menu!</SecaoTopotitulo>
                 </SecaoTopoFundo>       
             </SecaoTopo>
             {/* FIM SECAO TOPO */}
             {/* INICIO SECAO PRATOS POPULARES */}
-            
+            <Populares></Populares>
             {/* FIM SECAO PRATOS POPULARES */}
+
+            {/* INCIO SECAO QUALIDADE */}
+            <Qualidade></Qualidade>
+            {/* FIM SECAO QUALIDADE */}
+
+            {/* INCIO SECAO INSCRICAO */}
+            <Inscricao></Inscricao>
+            {/* FIM SECAO INSCRICAO */}
             <Rodape></Rodape>
         </>
     )
