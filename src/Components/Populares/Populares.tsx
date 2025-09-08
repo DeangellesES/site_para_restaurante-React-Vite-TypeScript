@@ -51,6 +51,7 @@ const SecaoPopularescontainercaixa = styled.div`
     z-index: 10;
     // height: 200px;
     position: relative;
+    cursor: pointer;
     &:hover {
         box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3); 
         overflow: hidden;
@@ -84,11 +85,11 @@ const SecaoPopularescontainercaixaParagrafoSegundo = styled.p`
     font-weight: 600;
     font-family: "Story Script", sans-serif;
 `
-const SecaoPopularescontainerBaixo = styled.div`
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-`
+// const SecaoPopularescontainerBaixo = styled.div`
+//     display: flex;
+//     justify-content: center;
+//     gap: 2rem;
+// `
 
 function Populares() {
 
@@ -104,7 +105,7 @@ function Populares() {
             <SecaoPopularescontainer>
                 <SecaoPopularescontainercaixa className="pratos">
                     <SecaoPopularescontainercaixaImg src={cogumelo} alt="" />
-                    <FaPlus className="icone-pratos"/>
+                    <FaPlus className="icone-pratos" />
                     <SecaoPopularescontainercaixaTitulo>Cogumelo Fresco</SecaoPopularescontainercaixaTitulo>
                     <SecaoPopularescontainercaixaDentro>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque neque voluptate liber.</p>
@@ -115,7 +116,7 @@ function Populares() {
 
                 <SecaoPopularescontainercaixa className="pratos">
                     <SecaoPopularescontainercaixaImg src={torrada} alt="" />
-                    <FaPlus className="icone-pratos"/>
+                    <FaPlus className="icone-pratos" />
                     <SecaoPopularescontainercaixaTitulo>Torrada de Queijo e Alho</SecaoPopularescontainercaixaTitulo>
                     <SecaoPopularescontainercaixaDentro>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque neque voluptate liber.</p>
@@ -126,7 +127,7 @@ function Populares() {
 
                 <SecaoPopularescontainercaixa className="pratos">
                     <SecaoPopularescontainercaixaImg src={saladaFrango} alt="" />
-                    <FaPlus className="icone-pratos"/>
+                    <FaPlus className="icone-pratos" />
                     <SecaoPopularescontainercaixaTitulo>Salada de Frango Grelhado</SecaoPopularescontainercaixaTitulo>
                     <SecaoPopularescontainercaixaDentro>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque neque voluptate liber.</p>
@@ -135,40 +136,40 @@ function Populares() {
 
                 </SecaoPopularescontainercaixa>
 
-                <SecaoPopularescontainerBaixo className="pratos">
-                    <SecaoPopularescontainercaixa>
-                        <SecaoPopularescontainercaixaImg src={ovo} alt="" />
-                        <FaPlus className="icone-pratos"/>
-                        <SecaoPopularescontainercaixaTitulo>Ovo Orgânico</SecaoPopularescontainercaixaTitulo>
-                        <SecaoPopularescontainercaixaDentro>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque neque voluptate liber.</p>
-                            <SecaoPopularescontainercaixaParagrafoSegundo>R$12.99</SecaoPopularescontainercaixaParagrafoSegundo>
-                        </SecaoPopularescontainercaixaDentro>
 
-                    </SecaoPopularescontainercaixa>
+                <SecaoPopularescontainercaixa className="pratos">
+                    <SecaoPopularescontainercaixaImg src={ovo} alt="" />
+                    <FaPlus className="icone-pratos" />
+                    <SecaoPopularescontainercaixaTitulo>Ovo Orgânico</SecaoPopularescontainercaixaTitulo>
+                    <SecaoPopularescontainercaixaDentro>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque neque voluptate liber.</p>
+                        <SecaoPopularescontainercaixaParagrafoSegundo>R$12.99</SecaoPopularescontainercaixaParagrafoSegundo>
+                    </SecaoPopularescontainercaixaDentro>
 
-                    <SecaoPopularescontainercaixa className="pratos">
-                        <SecaoPopularescontainercaixaImg src={sopaTomate} alt="" />
-                        <FaPlus className="icone-pratos"/>
-                        <SecaoPopularescontainercaixaTitulo>Sopa de Tomate com Frango</SecaoPopularescontainercaixaTitulo>
-                        <SecaoPopularescontainercaixaDentro>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque neque voluptate liber.</p>
-                            <SecaoPopularescontainercaixaParagrafoSegundo>R$23.10</SecaoPopularescontainercaixaParagrafoSegundo>
-                        </SecaoPopularescontainercaixaDentro>
+                </SecaoPopularescontainercaixa>
 
-                    </SecaoPopularescontainercaixa>
+                <SecaoPopularescontainercaixa className="pratos">
+                    <SecaoPopularescontainercaixaImg src={sopaTomate} alt="" />
+                    <FaPlus className="icone-pratos" />
+                    <SecaoPopularescontainercaixaTitulo>Sopa de Tomate com Frango</SecaoPopularescontainercaixaTitulo>
+                    <SecaoPopularescontainercaixaDentro>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque neque voluptate liber.</p>
+                        <SecaoPopularescontainercaixaParagrafoSegundo>R$23.10</SecaoPopularescontainercaixaParagrafoSegundo>
+                    </SecaoPopularescontainercaixaDentro>
 
-                    <SecaoPopularescontainercaixa className="pratos">
-                        <SecaoPopularescontainercaixaImg src={saladaCrocante} alt="" />
-                        <FaPlus className="icone-pratos"/>
-                        <SecaoPopularescontainercaixaTitulo>Salada com Frango Crocante</SecaoPopularescontainercaixaTitulo>
-                        <SecaoPopularescontainercaixaDentro>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque neque voluptate liber.</p>
-                            <SecaoPopularescontainercaixaParagrafoSegundo>R$5.59</SecaoPopularescontainercaixaParagrafoSegundo>
-                        </SecaoPopularescontainercaixaDentro>
+                </SecaoPopularescontainercaixa>
 
-                    </SecaoPopularescontainercaixa>
-                </SecaoPopularescontainerBaixo>
+                <SecaoPopularescontainercaixa className="pratos">
+                    <SecaoPopularescontainercaixaImg src={saladaCrocante} alt="" />
+                    <FaPlus className="icone-pratos" />
+                    <SecaoPopularescontainercaixaTitulo>Salada com Frango Crocante</SecaoPopularescontainercaixaTitulo>
+                    <SecaoPopularescontainercaixaDentro>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque neque voluptate liber.</p>
+                        <SecaoPopularescontainercaixaParagrafoSegundo>R$5.59</SecaoPopularescontainercaixaParagrafoSegundo>
+                    </SecaoPopularescontainercaixaDentro>
+
+                </SecaoPopularescontainercaixa>
+
 
             </SecaoPopularescontainer>
         </SecaoPopulares>
