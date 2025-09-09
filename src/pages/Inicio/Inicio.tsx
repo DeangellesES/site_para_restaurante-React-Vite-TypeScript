@@ -28,7 +28,7 @@ const SecaoTopo = styled.section`
 `
 const SecaoTopoFundo = styled.div`
     display: flex;
-    height: 108vh;
+    height: 100%;
     align-items: center;
     justify-content: center;
     background-color: #0e0b188f;

@@ -10,7 +10,7 @@ const TopoFundo = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 1rem 8.5rem;
-    background-color: #0e0b188f;
+    
 `
 const TopoTitulo = styled.h1`
     text-decoration: none;
