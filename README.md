@@ -30,4 +30,5 @@
   <li>Várias animações com CSS e JavaScript</li>
   <li>projeto react limpo</li>
   <li>eventos de scroll e hover</li>
+  <li>form, label e input</li>
 </ul>
