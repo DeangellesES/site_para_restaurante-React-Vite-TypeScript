@@ -31,4 +31,6 @@
   <li>projeto react limpo</li>
   <li>eventos de scroll e hover</li>
   <li>form, label e input</li>
+  <li>função para contar números até um certo número no DOM</li>
+  <li>animações para vir de baixo e de lado</li>
 </ul>
