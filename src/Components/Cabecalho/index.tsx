@@ -1,8 +1,6 @@
 import styled from "styled-components"
 import { Link } from "react-router-dom";
 
-import React, { useState } from 'react';
-
 const Topo = styled.header`
     color: #fff;
     border-bottom: 1px solid #fff;
@@ -72,7 +70,6 @@ function Cabecalho() {
                     <TopoNavegacaoLinkBtn href="">Reserva</TopoNavegacaoLinkBtn>
                 </TopoNavegacao>
             </TopoFundo>
-
 
         </Topo>
     )
