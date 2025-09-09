@@ -1,69 +1,36 @@
-# React + TypeScript + Vite
+<h1>Projeto: Site para um Restaurante </h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h2>📌 Sobre o Projeto</h2>
+<p>Este é um projeto front-end para um restaurante, desenvolvido para praticar.</p>
 
-Currently, two official plugins are available:
+<h3>💻<a href="https://site-para-restaurante-react-vite-ty.vercel.app/contato" target="_blank"> Acessar Site do Projeto Aqui</a></h3>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<h2>🚀 Tecnologias Utilizadas</h2>
+<ul>
+  <li><b>HTML</b></li>
+  <li><b>CSS</b></li>
+  <li><b>JavaScript</b> - React </li>
+  <li><b>Vite</b></li>
+</ul>
 
-## Expanding the ESLint configuration
+<h2>✨ Funcionalidades</h2>
+<ul>
+  <li>Fazer a leitura de um arquivo json e jogar na tela de forma organizada</li>
+  <li>Inserir conteúdo nescessário da tabela com JavaScript</li>
+  <li>Pesquisar por id através de um campo input</li>
+</ul>
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+<h2>⚙️ Detalhes Técnicos</h2>
+<ul>
+  <li>Paradigma de programação Estruturado</li>
+  <li>Manipulação do DOM com JavaScript</li>
+  <li>Icones com bootstrap icons, icones bem posicionados</li>
+  <li>Criação da parte da tabela com JavaSript</li>
+  <li>Flex-box CSS</li>
+  <li>Jogar dados da tabela na tela com onload chamando função na tag body, assim que a página é iniciada</li>
+  <li>Mostrar e exibir com CSS e JavaScript</li>
+  <li>addEventListener com "input" e "load"</li>
+  <li>Leitura de arquivos JSON com new XMLHttpRequest(), GET e responseText</li>
+  <li>Criação de linhas da tabela com forEach e innerHTML +=</li>
+  <li>Busca por id com querySelector, querySelectorAll, desvio de fluxo com if e else</li>
+</ul>
