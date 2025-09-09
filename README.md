@@ -3,7 +3,7 @@
 <h2>📌 Sobre o Projeto</h2>
 <p>Este é um projeto front-end para um restaurante, desenvolvido para praticar.</p>
 
-<h3>💻<a href="https://site-para-restaurante-react-vite-ty.vercel.app/contato" target="_blank"> Acessar Site do Projeto Aqui</a></h3>
+<h3>💻<a href="https://site-para-restaurante-react-vite-ty.vercel.app/" target="_blank"> Acessar Site do Projeto Aqui</a></h3>
 
 <h2>🚀 Tecnologias Utilizadas</h2>
 <ul>
