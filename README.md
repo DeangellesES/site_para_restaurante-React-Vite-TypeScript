@@ -12,22 +12,22 @@
 
 <h2>✨ Funcionalidades</h2>
 <ul>
-  <li>Fazer a leitura de um arquivo json e jogar na tela de forma organizada</li>
-  <li>Inserir conteúdo nescessário da tabela com JavaScript</li>
-  <li>Pesquisar por id através de um campo input</li>
+  <li>Divulgar o Restaurante</li>
+  <li>Divulgar produtos e serviços</li>
+  <li>Divulgar contato, localização e redes sociais</li>
+  <li>Fazer reserva de pessoas no restaurante</li>
+  <li>Informações relevantes e importantes do Restaurante</li>
 </ul>
 
 <h2>⚙️ Detalhes Técnicos</h2>
 <ul>
   <li>Paradigma de programação Estruturado</li>
-  <li>Manipulação do DOM com JavaScript</li>
-  <li>Icones com bootstrap icons, icones bem posicionados</li>
-  <li>Criação da parte da tabela com JavaSript</li>
+  <li>Manipulação do DOM com JavaScript e com React</li>
+  <li>Icones do React icons, icones bem posicionados</li>
+  <li>React router dom para navegação entre páginas, syled components para estilização</li>
   <li>Flex-box CSS</li>
-  <li>Jogar dados da tabela na tela com onload chamando função na tag body, assim que a página é iniciada</li>
-  <li>Mostrar e exibir com CSS e JavaScript</li>
-  <li>addEventListener com "input" e "load"</li>
-  <li>Leitura de arquivos JSON com new XMLHttpRequest(), GET e responseText</li>
-  <li>Criação de linhas da tabela com forEach e innerHTML +=</li>
-  <li>Busca por id com querySelector, querySelectorAll, desvio de fluxo com if e else</li>
+  <li>framework Vite para Buildar o projeto e melhoar a performance</li>
+  <li>Várias animações com CSS e JavaScript</li>
+  <li>projeto react limpo</li>
+  <li>eventos de scroll e hover</li>
 </ul>
