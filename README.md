@@ -1,7 +1,7 @@
 <h1>Projeto: Site para um Restaurante </h1>
 
 <h2>📌 Sobre o Projeto</h2>
-<p>Este é um projeto front-end para um restaurante, desenvolvido para praticar.</p>
+<p>Este é um projeto Front-End dedicado a um Restaurante, sendo possível customizar de acordo com a necessidade. Este site foi criado para fins de prática da tecnologia React.js e TypeScript. Site com informações de contato e endereço. Projeto meramente ilustrativo, criado por mim.</p>
 
 <h3>💻<a href="https://site-para-restaurante-react-vite-ty.vercel.app/" target="_blank"> Acessar Site do Projeto Aqui</a></h3>
 
