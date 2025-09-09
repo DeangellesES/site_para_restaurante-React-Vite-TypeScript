@@ -9,7 +9,7 @@ import styled from "styled-components"
 
 import imgTopo from "./assets/restaurante-mesa.jpg"
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const SecaoTopo = styled.section`
     background-image: url(${imgTopo});
